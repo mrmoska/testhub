@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/heal.css"/>
+	</head>
+<!-- <style>
+*{  
+    margin: 0;   /* 外边距0*/
+    padding: 0;  /* 外边距0*/
+
+}
+body{
+    overflow-x: hidden; /* 超出隐藏*/
+}
+a{
+	color: white;   /* 颜色白色*/
+	text-decoration: none;  /* 超出隐藏*/ 
+}
+ul,li{
+    list-style: none;   /* 超出隐藏*/
+}
+.min-width{
+	width: 1200px;
+	margin: 0 auto;
+}
+header{
+   width:1600px;
+    height: 450px;
+    overflow: hidden;
+}
+/*轮播图start*/
+
+#benner {
+	width:1600px;
+	height:450px;
+}
+#benner .imga {
+	display:none;
+}
+#benner .img {
+	width: 100%;
+	height: 100%
+}
+#benner .img .active {
+	display:block;
+}
+#benner .title {
+	width:101px;
+	height:16px;
+	background-color: black;
+	/*background-color:rgba(226,226,226,0.6);*/
+	border-radius:30px;
+	margin-top:-35px;
+	float:left;
+	margin-left:45%;
+	margin-right:40%;
+	padding:6px 0px 0px 10px;
+	position:relative;
+}
+#benner .title .nr {
+	list-style:none;
+	width:10px;
+	height:10px;
+	background:#fff;
+	border-radius:10px;
+	float:left;
+	margin-right:10px;
+	margin-bottom:0px;
+}
+#benner .title .active {
+	background:#db192a;
+}
+.nav .uu-lists{
+	position: absolute;
+	top: 80px;
+	z-index: 99;
+	height: 400px !important;
+	display: flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba(255,87,34,.7);
+	transition:  0.5s ease;
+	opacity: 0;
+}
+.uu-lists>li{
+	float: none;
+	display: block;
+	border-bottom: 1px solid white;
+	/*background-color: rgba(255,87,34,.7);*/
+}
+
+.uu-lists>li:last-child{
+	border-bottom: none;
+}
+/*轮播图end*/
+.nav{
+	position: relative;
+    width: 100%;
+    height: 80px;
+    transition: .8s ease; 
+     background-color: rgba(255,87,34,.7);
+    }
+.nav ul{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+   
+}
+.nav ul li{
+    float: left;
+    width: 140px;
+    height: 100%;
+   
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.nav ul .logo{
+	width: 300px;
+	background: none;
+	text-align: center;
+	font-size: 34px;
+	font-weight: 700;
+}
+.img{
+     width: 100%;
+    height: 580px;
+    margin: 0 auto;
+}
+.img ul{
+    position: relative;
+      width: 100%;
+    height: 100%;
+    
+}
+.img ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.img ul li img{
+   width: 100%;
+   height: 100%;
+}
+.img ul .active{
+    opacity: 1;
+    animation: enlarge 4s linear infinite;  
+}
+@keyframes enlarge{
+    0%{
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100%{
+        transform: scale(1.25);
+        opacity: 0.6;
+    }
+
+}
+/*关于我们start*/
+nav{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+nav h3,.wrap h3{
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	margin: 0px auto;
+	padding-top: 60px;
+	border-bottom: 5px solid rgb(255,87,34);
+	font-size: 34px;
+	color:rgb(255,87,34);
+}
+nav p{
+	width: 800px;  /*宽度800px*/
+	height: 60px;  /*高度800px*/
+	padding-top: 40px;
+	margin: 0px auto;  /*居中显示*/
+	font-size: 24px;
+	color:#aaa;
+	line-height: 46px;
+}
+/*关于我们end*/
+/*美食详情start*/
+.wrap{
+    width: 100%;
+    height: 800px;
+    background-color: #f5f5f5;
+}
+.wrap .wrap-uu{
+	width: 1200px;
+	height: 700px;
+	margin: 30px auto;
+}
+.wrap ul li{
+	width: 350px;
+	height: 250px;
+	float: left;
+	margin: 20px;
+	background-color: white;
+ 	text-align: center;
+ 	
+ 	border-radius: 4px;
+}
+.wrap ul li h2{
+	color: rgb(255,87,34);
+	margin-top: 60px;
+}
+.wrap ul li p{
+	margin-top: 20px;
+}
+.wrap ul li:hover{
+	background-color: rgb(189,208,1);
+	border:none;
+	color: white;
+	/*border: 1px solid rgb(255,87,34);*/
+}
+.wrap ul li:nth-of-type(odd){
+	background: url(../img/1.jpg) no-repeat;  /*背景图片*/
+	background-size: cover;
+}
+
+
+
+/*美食详情start*/
+.news{
+    width: 100%;
+    height: 400px;
+  	background: url(../img/banner.jpg) no-repeat;  /*背景图片*/
+	background-size: cover;
+}
+.news ul{
+	height: 400px;
+}
+.news ul li{
+	float: left;
+	width: 360px;
+	margin: 20px;
+	text-align: center;
+}
+.news ul .news-img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border:1px solid rgb(255,87,34);
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.news ul li h4{
+	margin: 10px 0px;
+	font-size: 22px;
+	color: rgb(255,87,34);
+}
+.news ul li p{
+	color: white;
+}
+.news ul .news-img img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;        /*DIV居中*/
+	text-align: center;     /*文本居中*/
+	border-radius: 50%;      /*图片圆形*/
+	transition: 0.5s ease;    /*执行动画*/
+}
+.news ul .news-img img:hover{
+	transform: scale(1.1);    /*悬停放大*/
+}
+footer{
+	width: 100%;
+	height: 80px;
+	background-color:rgb(33,33,33);
+}
+footer p{
+	text-align: center;
+	color: white;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+
+
+/*小屏幕*/
+
+@media screen and (max-width: 768px) {
+	.wrap {
+		height: 100%;
+	}
+	.wrap .wrap-uu {
+		width: 100%;
+		height: 100%;
+	}
+	.wrap-uu{
+		 display: flex;
+		 flex-direction:column;
+		 align-items: center;
+	}
+	header #benner .img img{
+		width: 768px;
+		height: 100%;
+	}
+	.news ul li {
+		width: 180px;
+	}
+	nav p{
+		width: 768px;
+		font-size: 18px;
+	}
+}
+/*平板*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	
+}
+/*中等屏幕*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	
+}
+/*大屏幕，或者宽屏*/
+
+@media screen and (min-width: 1200px) {
+	.uu-nav {
+		width: 100%;
+	}
+}
+
+
+
+
+
+/*小屏幕*/
+
+@media screen and (max-width: 768px) {
+	.uu-nav {
+		width: 768px;
+		min-width: 490px;
+		
+	}
+	.nav-lists{
+		display: none;
+	}
+	.nav ul .ico{
+		width: 160px;
+		text-align: right;
+		font-size: 26px;
+		
+	}
+}
+/*平板*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.uu-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav ul .ico{
+		display: none;
+	}
+}
+/*中等屏幕*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.nav ul .ico{
+		display: none;
+	}
+}
+/*大屏幕，或者宽屏*/
+
+@media screen and (min-width: 1200px) {
+	.nav ul .ico{
+		display: none;
+	}
+}
+.bananer{
+	width: 100%;
+	height: 400px;
+}
+.bananer img{
+	width: 100%;
+	height: 400px;
+}
+nav{
+	height: 150px;
+}
+.heal{
+	height: 720px;
+	
+}
+.heal .heal-left{
+	width: 40%;
+	height: 370px;
+	float: left;
+}
+
+.heal .heal-right{
+	width: 50%;
+	float: left;
+	height: 370px;
+	margin-left: 70px;
+}
+.heal .heal-left p ,.heal .heal-right p{
+	margin-top: 20px;
+	line-height: 30px;
+}
+.heal .heal-left strong,.heal .heal-right strong{
+	display: block;
+	width: 140px;
+	height: 36px;
+	margin-top: 30px;
+	line-height: 36px;
+	color: white;
+	text-align: center;
+	background-color: rgb(172,145,90);  /*背景颜色*/
+}
+.heals,.heals ul{
+	height: 380px;
+	overflow: hidden;
+}
+
+.heals ul li{
+	width: 400px;
+	height: 380px;
+	float: left;
+}
+.heals ul li .heals-info {
+	display: flex;
+	justify-content: space-around; 
+}
+.heals ul li .heals-info .heals-span{
+	width: 95px;
+	height: 153px;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	line-height: 153px;
+	background-color: rgb(172,145,90); 
+}
+.heals ul li .heals-info  .heals-wrpa{
+	width: 270px;
+	height: 153px;
+}
+.heals ul li .heals-info p{
+	margin-top: 15px;
+	font-size: 14px;
+	    color: #999;
+}
+.heals ul li .heals-p{
+	margin-top: 15px;
+	font-size: 14px;
+	    color: #999;
+}
+.master{
+	
+	height: 800px;
+}
+.master ul li{
+	position: relative;
+	width: 530px;
+	height: 330px;
+	float: left;
+	margin: 10px 20px;
+}
+.master ul li img{
+	width: 530px;
+	height: 330px;
+}
+.master ul li .master-info{
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	width: 370px;
+	height: 140px;
+	border: 10px solid white;
+	transform: translateX(-50%);
+	transition: .5s ease;
+	z-index: 99;
+}
+.master-info .master-h1{
+	display: none;
+	text-align: center;
+	color: white;
+	
+}
+.master ul li:hover .master-info{
+	top: 100px;
+}
+.master ul li:hover .master-h1{
+	display: block;
+}
+/*小屏幕*/
+
+@media screen and (max-width: 768px) {
+	.heal {
+		width: 768px;
+		height: 100%;
+		display: flex;
+		flex-direction:column;
+		justify-content: center;
+		align-items: center;
+	}
+
+ 	.heal .heal-left{
+ 		width: 460px;
+ 		height: 100%;
+ 		padding: 20px;
+ 	}
+ 	.heal .heal-left p{
+ 		width: 380px;
+ 		line-height: 24px;
+ 		height: 150px;
+ 	}
+ 	.heal .heal-right{
+ 		margin: 0;
+ 		height: 450px;
+ 	}
+ 	.heals ul{
+ 		margin-top: 40px ;
+ 		width: 768px;
+ 		height: 100%;
+ 		display: flex;
+		flex-direction:column;
+		justify-content: space-between;
+		align-items: center;
+ 	} 
+	.heals {
+		height: 100%;
+	}
+	.master {
+		width: 768px;
+		height: 100%;
+		text-align: center;
+	}
+	.master ul{
+		width: 768px;
+		height: 1200px;
+		display: flex;
+		flex-direction:column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+.master ul li{
+	width: 768px;
+	margin: 0 auto;
+}
+.master ul li img{
+	text-align: center;
+	width: 450px;
+	height: 250px;	
+}
+.master ul .master-info{
+display: none;
+}
+}
+/*平板*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	
+
+}
+/*中等屏幕*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	
+}
+/*大屏幕，或者宽屏*/
+
+@media screen and (min-width: 1200px) {
+	
+}
+
+	</style> -->
+	<body>
+		       <div class="nav">
+        	<ul class="uu-nav">
+                	<li class="logo">美食汇</li>
+                    <li class="nav-lists"><a href="index.html">首页</a> </li>
+                    <li class="nav-lists"><a href="health.html">饮食健康</a> </li>
+                    <li class="nav-lists"><a href="master.html">美食达人</a> </li>
+                    <li class="nav-lists"><a href="caipu.html">菜谱大全</a> </li>
+                    <li class="nav-lists"><a href="login.html">登录</a> </li>
+                    <li class="ico">三</li>
+                </ul>
+                <ul class="uu-lists">
+                	 <li><a href="index.html">首页</a> </li>
+                    <li><a href="health.html">饮食健康</a> </li>
+                    <li><a href="master.html">美食达人</a> </li>
+                    <li><a href="caipu.html">菜谱大全</a> </li>
+                    <li><a href="login.html">登录</a> </li>
+                </ul>
+            </div>
+ <div class="bananer">
+ 	<img src="img/banner1.jpg"/>
+ </div>
+ <nav>
+    	<h3>饮食健康</h3>
+
+</nav>
+
+<div class="heal min-width">.
+	<div class="heal-left">
+		<h1>饮食健康</h1>
+		<p>早晨起床后喝一杯凉开水，有利于肝、肾代谢和降低血压，防止心肌梗 塞，有的人称之为“复活水”。有关专家认为，人经过几个小时睡眠后，消化道已排空，晨起饮一杯凉开水，能很快被吸收进入血液循环，稀释血液，等于对体内各器官进行了一次“内洗涤”。注意饮用水健康，水是生命之源。不要渴了才喝水。</p>
+		<strong>了解更多</strong>
+	</div>
+	<div class="heal-right">
+		<img src="img/health-1.jpg"/>
+	</div>
+	<div class="heal-left">
+		<img src="img/t1.jpg"/>
+	</div>
+	<div class="heal-right">
+			<h1>饮食健康</h1>
+		<p>其实果蔬除了对人体健康有利外，也因为果蔬中含有各种有机酸、芳香物质及各种色素成分，对调解人们的口味也有重要的意义，饮食中适当的搭配果蔬，人们就可以烹调出各种口味、色香味俱全的菜肴，这样，既达到了减肥保健的目的，又满足了口福，何乐而不为呢！</p>
+		<strong>了解更多</strong>
+	</div>
+</div>
+ <nav>
+    	<h3>健康小常识</h3>
+</nav>
+<div class="heals min-width">.
+	<ul>
+		<li>
+			<div class="heals-info">
+				<div class="heals-span">❤</div>
+				<div class="heals-wrpa">
+					<h3>健康小常识</h3>
+					<p>良好合理的健康饮食习惯，可使身体健康地生长、发育；不良的饮食习惯则会导致人体正常的生理功能紊乱而感染疾病。相反，恰当的饮食对疾病会起到治疗的作用，帮助人体恢复健康。</p>
+				</div>
+			</div>
+			<div class="heals-p">
+				<p>喝豆浆时不要加鸡蛋及红糖，也不要喝太多</p>
+				<p>每天摄取均衡的饮食，不过量</p>
+				<p>减少食用盐腌、烟熏及烧烤的食物</p>
+				<p>每天摄取富含高纤维的五谷类及豆类</p>
+				<p>空腹时不要吃蕃茄，最好饭后吃</p>
+				<p>刚出炉的面包不宜马上食用</p>
+				<p>坚持饮食健康习惯身体倍棒！</p>
+			</div>
+				
+			
+		</li>
+		<li>
+			<div class="heals-info">
+				<div class="heals-span">❤</div>
+				<div class="heals-wrpa">
+					<h3>健康小常识</h3>
+					<p>良好合理的健康饮食习惯，可使身体健康地生长、发育；不良的饮食习惯则会导致人体正常的生理功能紊乱而感染疾病。相反，恰当的饮食对疾病会起到治疗的作用，帮助人体恢复健康。</p>
+				</div>
+			</div>
+			<div class="heals-p">
+				<p>喝豆浆时不要加鸡蛋及红糖，也不要喝太多</p>
+				<p>每天摄取均衡的饮食，不过量</p>
+				<p>减少食用盐腌、烟熏及烧烤的食物</p>
+				<p>每天摄取富含高纤维的五谷类及豆类</p>
+				<p>空腹时不要吃蕃茄，最好饭后吃</p>
+				<p>刚出炉的面包不宜马上食用</p>
+				<p>坚持饮食健康习惯身体倍棒！</p>
+			</div>
+				
+			
+		</li>
+		<li>
+			<div class="heals-info">
+				<div class="heals-span">❤</div>
+				<div class="heals-wrpa">
+					<h3>健康小常识</h3>
+					<p>良好合理的健康饮食习惯，可使身体健康地生长、发育；不良的饮食习惯则会导致人体正常的生理功能紊乱而感染疾病。相反，恰当的饮食对疾病会起到治疗的作用，帮助人体恢复健康。</p>
+				</div>
+			</div>
+			<div class="heals-p">
+				<p>喝豆浆时不要加鸡蛋及红糖，也不要喝太多</p>
+				<p>每天摄取均衡的饮食，不过量</p>
+				<p>减少食用盐腌、烟熏及烧烤的食物</p>
+				<p>每天摄取富含高纤维的五谷类及豆类</p>
+				<p>空腹时不要吃蕃茄，最好饭后吃</p>
+				<p>刚出炉的面包不宜马上食用</p>
+				<p>坚持饮食健康习惯身体倍棒！</p>
+			</div>
+				
+			
+		</li>
+	</ul>
+	
+</div>
+	<footer>
+		<p>友情链接 <a href="http://www.baidu.com">百度一下</a> <a href="http://www.baidu.com">美食网站</a> 网站链接：<a href="https://www.meishichina.com/" target="_blank">美食汇</a> </p>
+		<p>美食汇网站开发——2022</p>
+	</footer>
+	<script src="js/nav.js" type="text/javascript">
+	</script>
+	</body>
+</html>

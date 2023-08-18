@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>美食汇</title>
+<link rel="stylesheet" href="css/style.css">
+<!-- <style>
+*{  
+    margin: 0;   /* 外边距0*/
+    padding: 0;  /* 外边距0*/
+
+}
+body{
+    overflow-x: hidden; /* 超出隐藏*/
+}
+a{
+	color: white;   /* 颜色白色*/
+	text-decoration: none;  /* 超出隐藏*/ 
+}
+ul,li{
+    list-style: none;   /* 超出隐藏*/
+}
+.min-width{
+	width: 1200px;
+	margin: 0 auto;
+}
+header{
+   width:1600px;
+    height: 450px;
+    overflow: hidden;
+}
+/*轮播图start*/
+
+#benner {
+	width:1600px;
+	height:450px;
+}
+#benner .imga {
+	display:none;
+}
+#benner .img {
+	width: 100%;
+	height: 100%
+}
+#benner .img .active {
+	display:block;
+}
+#benner .title {
+	width:101px;
+	height:16px;
+	background-color: black;
+	/*background-color:rgba(226,226,226,0.6);*/
+	border-radius:30px;
+	margin-top:-35px;
+	float:left;
+	margin-left:45%;
+	margin-right:40%;
+	padding:6px 0px 0px 10px;
+	position:relative;
+}
+#benner .title .nr {
+	list-style:none;
+	width:10px;
+	height:10px;
+	background:#fff;
+	border-radius:10px;
+	float:left;
+	margin-right:10px;
+	margin-bottom:0px;
+}
+#benner .title .active {
+	background:#db192a;
+}
+.nav .uu-lists{
+	position: absolute;
+	top: 80px;
+	z-index: 99;
+	height: 400px !important;
+	display: flex;
+	flex-direction:column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: rgba(255,87,34,.7);
+	transition:  0.5s ease;
+	opacity: 0;
+}
+.uu-lists>li{
+	float: none;
+	display: block;
+	border-bottom: 1px solid white;
+	/*background-color: rgba(255,87,34,.7);*/
+}
+
+.uu-lists>li:last-child{
+	border-bottom: none;
+}
+/*轮播图end*/
+.nav{
+	position: relative;
+    width: 100%;
+    height: 80px;
+    transition: .8s ease; 
+     background-color: rgba(255,87,34,.7);
+    }
+.nav ul{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+   
+}
+.nav ul li{
+    float: left;
+    width: 140px;
+    height: 100%;
+   
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.nav ul .logo{
+	width: 300px;
+	background: none;
+	text-align: center;
+	font-size: 34px;
+	font-weight: 700;
+}
+.img{
+     width: 100%;
+    height: 580px;
+    margin: 0 auto;
+}
+.img ul{
+    position: relative;
+      width: 100%;
+    height: 100%;
+    
+}
+.img ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.img ul li img{
+   width: 100%;
+   height: 100%;
+}
+.img ul .active{
+    opacity: 1;
+    animation: enlarge 4s linear infinite;  
+}
+@keyframes enlarge{
+    0%{
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100%{
+        transform: scale(1.25);
+        opacity: 0.6;
+    }
+
+}
+/*关于我们start*/
+nav{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+nav h3,.wrap h3{
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	margin: 0px auto;
+	padding-top: 60px;
+	border-bottom: 5px solid rgb(255,87,34);
+	font-size: 34px;
+	color:rgb(255,87,34);
+}
+nav p{
+	width: 800px;  /*宽度800px*/
+	height: 60px;  /*高度800px*/
+	padding-top: 40px;
+	margin: 0px auto;  /*居中显示*/
+	font-size: 24px;
+	color:#aaa;
+	line-height: 46px;
+}
+/*关于我们end*/
+/*美食详情start*/
+.wrap{
+    width: 100%;
+    height: 800px;
+    background-color: #f5f5f5;
+}
+.wrap .wrap-uu{
+	width: 1200px;
+	height: 700px;
+	margin: 30px auto;
+}
+.wrap ul li{
+	width: 350px;
+	height: 250px;
+	float: left;
+	margin: 20px;
+	background-color: white;
+ 	text-align: center;
+ 	
+ 	border-radius: 4px;
+}
+.wrap ul li h2{
+	color: rgb(255,87,34);
+	margin-top: 60px;
+}
+.wrap ul li p{
+	margin-top: 20px;
+}
+.wrap ul li:hover{
+	background-color: rgb(189,208,1);
+	border:none;
+	color: white;
+	/*border: 1px solid rgb(255,87,34);*/
+}
+.wrap ul li:nth-of-type(odd){
+	background: url(./img/1.jpg) no-repeat;  /*背景图片*/
+	background-size: cover;
+}
+
+
+
+/*美食详情start*/
+.news{
+    width: 100%;
+    height: 400px;
+  	background: url(./img/banner.jpg) no-repeat;  /*背景图片*/
+	background-size: cover;
+}
+.news ul{
+	height: 400px;
+}
+.news ul li{
+	float: left;
+	width: 360px;
+	margin: 20px;
+	text-align: center;
+}
+.news ul .news-img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border:1px solid rgb(255,87,34);
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.news ul li h4{
+	margin: 10px 0px;
+	font-size: 22px;
+	color: rgb(255,87,34);
+}
+.news ul li p{
+	color: white;
+}
+.news ul .news-img img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;        /*DIV居中*/
+	text-align: center;     /*文本居中*/
+	border-radius: 50%;      /*图片圆形*/
+	transition: 0.5s ease;    /*执行动画*/
+}
+.news ul .news-img img:hover{
+	transform: scale(1.1);    /*悬停放大*/
+}
+footer{
+	width: 100%;
+	height: 80px;
+	background-color:rgb(33,33,33);
+}
+footer p{
+	text-align: center;
+	color: white;
+	line-height: 40px;
+	font-size: 14px;
+}
+
+
+
+/*小屏幕*/
+
+@media screen and (max-width: 768px) {
+	.wrap {
+		height: 100%;
+	}
+	.wrap .wrap-uu {
+		width: 100%;
+		height: 100%;
+	}
+	.wrap-uu{
+		 display: flex;
+		 flex-direction:column;
+		 align-items: center;
+	}
+	header #benner .img img{
+		width: 768px;
+		height: 100%;
+	}
+	.news ul li {
+		width: 180px;
+	}
+	nav p{
+		width: 768px;
+		font-size: 18px;
+	}
+}
+/*平板*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	
+}
+/*中等屏幕*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	
+}
+/*大屏幕，或者宽屏*/
+
+@media screen and (min-width: 1200px) {
+	.uu-nav {
+		width: 100%;
+	}
+}
+
+
+
+
+
+/*小屏幕*/
+
+@media screen and (max-width: 768px) {
+	.uu-nav {
+		width: 768px;
+		min-width: 490px;
+		
+	}
+	.nav-lists{
+		display: none;
+	}
+	.nav ul .ico{
+		width: 160px;
+		text-align: right;
+		font-size: 26px;
+		
+	}
+}
+/*平板*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.uu-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav ul .ico{
+		display: none;
+	}
+}
+/*中等屏幕*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	.nav ul .ico{
+		display: none;
+	}
+}
+/*大屏幕，或者宽屏*/
+
+@media screen and (min-width: 1200px) {
+	.nav ul .ico{
+		display: none;
+	}
+}
+</style> -->
+</head>
+<body>
+        <div class="nav">
+        	<ul class="uu-nav">
+                	<li class="logo">美食汇</li>
+                    <li class="nav-lists"><a href="index.html">首页</a> </li>
+                    <li class="nav-lists"><a href="health.html">饮食健康</a> </li>
+                    <li class="nav-lists"><a href="master.html">美食达人</a> </li>
+                    <li class="nav-lists"><a href="caipu.html">菜谱大全</a> </li>
+                    <li class="nav-lists"><a href="login.html">登录</a> </li>
+                    <li class="ico">三</li>
+                </ul>
+                <ul class="uu-lists">
+                	 <li><a href="index.html">首页</a> </li>
+                    <li><a href="health.html">饮食健康</a> </li>
+                    <li><a href="master.html">美食达人</a> </li>
+                    <li><a href="caipu.html">菜谱大全</a> </li>
+                    <li><a href="login.html">登录</a> </li>
+                </ul>
+            </div>
+    <header>
+     <div id="benner">
+		    <div class="img">
+		        <img src="img/11.jpg" class="imga active">
+		       	<img src="img/22.jpg" class="imga">
+		        <img src="img/33.jpg" class="imga">
+		        <img src="img/44.jpg" class="imga">
+		        <img src="img/55.jpg" class="imga">
+		    </div>
+		    <ul class="title">
+		        <li class="nr active"></li>
+		        <li class="nr"></li>
+		        <li class="nr"></li>
+		        <li class="nr"></li>
+		        <li class="nr"></li>
+		    </ul>
+	</div>
+    </header>
+    <nav>
+    	<h3>关于我们</h3>
+    	<p>一个享受美食与交流美食的地方，在这里我们可以发现有许多的特色美食，以及许多美食达人分享的营养膳食。
+"美食汇"给你不一样的感觉！</p>
+    </nav>
+    <div class="wrap">
+    		<h3>特性服务</h3>
+		        <ul class="wrap-uu">
+		            <li>
+		            	<h2>美味的食物</h2>
+		            	<p>这里的食物既美味又有营养，美食多多，种类丰富，欢迎您的到来！</p>
+		            </li>
+		            <li>
+		            	<h2>各种饮料</h2>
+		            	<p>闲暇的时光与朋友品尝一杯咖啡，聊聊家长里短也是一种不错的方式！</p>
+		            </li>
+		            <li>
+		            	<h2>您的认可</h2>
+		            	<p>我们专致于服务，以最好的姿态服务您们，您肯定是对我们最大的支持！</p>
+		            </li>
+		             <li>
+		            	<h2>送货上门</h2>
+		            	<p>我们为了更好服务客人，开通了外卖，让您足不出户就能享受美食！</p>
+		            </li>
+		             <li>
+		            	<h2>礼品赠送</h2>
+		            	<p>我们在双“十二”推出了礼品赠送活动，礼品丰厚，期待您的参与！</p>
+		            </li>
+		            <li>
+		            	<h2>私人订制</h2>
+		            	<p>在您的特殊日子，例如：生日，纪念日等我们接受您的特殊要求！</p>
+		            </li>
+		        </ul>
+    </div>
+    
+    <div class="news ">
+        <ul class="min-width">
+        	<li>
+        		<div class="news-img">
+        			<img src="img/pu1.jpg"/>
+        		</div>
+        		<h4>我们的特色菜</h4>
+        		<p>我们有自己的特色菜，种类繁多，有家乡菜、农家菜、也有各地著名美食。</p>
+        	</li>
+        	<li>
+        		<div class="news-img">
+        			<img src="img/pu2.jpg"/>
+        		</div>
+        		<h4>我们的特色菜</h4>
+        		<p>我们有自己的特色菜，种类繁多，有家乡菜、农家菜、也有各地著名美食。</p>
+        	</li>
+        	<li>
+        		<div class="news-img">
+        			<img src="img/pu3.jpg"/>
+        		</div>
+        		<h4>我们的特色菜</h4>
+        		<p>我们有自己的特色菜，种类繁多，有家乡菜、农家菜、也有各地著名美食。</p>
+        	</li>
+        </ul>
+    </div>
+	<footer>
+		<p>友情链接 <a href="http://www.baidu.com">百度一下</a> <a href="http://www.baidu.com">美食网站</a> 网站链接：<a href="https://www.meishichina.com/" target="_blank">美食汇</a> </p>
+		<p>美食汇网站开发——2022</p>
+	</footer>
+	<!-- <script type="text/javascript" src="js/index.js"> -->
+</script>
+	<!-- <script type="text/javascript" src="js/nav.js"> -->
+</script>
+</body>
+</html>
